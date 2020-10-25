@@ -1,0 +1,164 @@
+body {
+    background-color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    height: 80px;
+    display: grid;
+    background-color: rgba(65, 65, 65, 0.589);
+}
+
+.navbar a {
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.logo-container {
+    height: 80px;
+    width: 80px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.logo {
+    height: 100%;
+}
+
+.nav-options {
+    width: 100%;
+    display: flex;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.nav-option {
+    padding: 0 50px;
+    /* Permisos a los hijos de un flexbox, para crecer */
+    /* 1 => se distribuye equitativamente */
+    /* Similar a un 1fr en grid */
+    flex-grow: 1;
+    display: flex;
+}
+
+.nav-option > span {
+    margin: auto;
+}
+
+.search-container {
+    width: 400px;
+    display: flex;
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+}
+
+.search-form {
+    width: 80%;
+    height: 35px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+}
+
+.search {
+    width: 70%;
+    margin: auto;
+    border: 0;
+}
+
+.search::placeholder {
+    color: gray;
+}
+
+.search-icon {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 7px;
+}
+
+.login-container {
+    display: flex;
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+}
+
+.login {
+    width: 70px;
+    margin: auto;
+}
+
+#info {
+    padding: 25% 15%;
+}
+
+@media (max-width: 1199px) {
+    /* Configurar para pantalla pequeña */
+
+    /* TODO: corregir que a partir de 680px el bloque de navbar no se vaya reduciendo, da mala estética a la barra. */
+
+    .navbar {
+        /*grid-row: 1 / 3; */
+        height: 160px;
+    }
+    .nav-options {
+        grid-row: 2 / 3;
+    }
+
+    .search-container {
+        grid-column: 2 / 3;
+    }
+
+    .login-container {
+        grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Configurar para pantallas de Tablets o iPads */
+
+    .navbar {
+        /*grid-row: 1 / 3; */
+        height: 160px;
+    }
+
+    .nav-options {
+        grid-row: 2 / 3;
+    }
+
+    .search-container {
+        grid-column: 2 / 3;
+    }
+
+    .login-container {
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Configurar para pantallas de Mobile Devices */
+
+    .navbar {
+        /*grid-row: 1 / 3; */
+        height: 80px;
+    }
+    
+    .nav-options {
+        grid-row: 1 / 2; 
+    }
+
+    .search-container {
+        /*grid-column: 2 / 3; */
+        display: none;
+    }
+
+    .login-container {
+        /* grid-column: 3 / 4; */
+        grid-row: 1 / 2; 
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> P4 | Flexbox & Media Queries</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="./images/mm1.jpg" alt="Memento mori" class="logo">
+        </div>
+        <div class="nav-options">
+            <a class="nav-option" href="#">
+                <span>Inicio <i class="fas fa-caret-down"></i></span>  
+            </a>
+            <a class="nav-option" href="#">
+                <span>Quienes Somos <i class="fas fa-caret-down"></i></span>
+            </a>
+            <a class="nav-option" href="#">
+                <span>Misión y Visión <i class="fas fa-caret-down"></i></span>
+            </a>
+        </div>
+        <div class="search-container">
+            <form class="search-form">
+                <i class="fas fa-search search-icon"></i>
+                <input class="search" type="text" placeholder="Buscar en Memento Mori...">
+            </form>
+        </div>
+        <div class="login-container">
+            <a class="login" href="#">Regístrate</a>
+        </div>
+    </div>
+    <div id="info">
+        <p>Media Queries configurados para 3 tipos de tamaños de pantalla. </p> <p>480 px para Mobile Devices (ocultando search bar), 768px para tablets o iPads y a 1199px para pantallas mas pequeñas que de escritorio.</p>
+    </div>
+</body>
+</html>
